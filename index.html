@@ -54,6 +54,7 @@
       font-size:14px;
     }
     .navlinks a:hover{border-color:var(--stroke); color:var(--text)}
+
     .hero{
       display:grid; grid-template-columns: 1.25fr .75fr; gap:16px;
       padding:16px 0 10px;
@@ -69,6 +70,8 @@
     h2{margin:0 0 10px; font-size: clamp(20px, 2.1vw, 30px)}
     h3{margin:10px 0 8px; font-size:16px}
     .sub{color:var(--muted); font-size: clamp(15px, 1.35vw, 18px); margin:0 0 14px}
+    .muted{color:var(--muted)}
+
     .pillrow{display:flex; gap:10px; flex-wrap:wrap; margin:12px 0 14px}
     .pill{
       padding:8px 10px; border-radius:999px;
@@ -77,6 +80,7 @@
       color: #d1d5db;
       font-size:13px;
     }
+
     .ctaRow{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
     .btn{
       display:inline-flex; align-items:center; justify-content:center;
@@ -96,6 +100,7 @@
     }
     .btn:hover{transform: translateY(-1px)}
     .small{font-size:13px; color:var(--muted); margin-top:10px}
+
     .side .line{
       display:flex; gap:12px; align-items:flex-start;
       padding:12px 0; border-bottom:1px solid var(--stroke)
@@ -109,16 +114,18 @@
       flex:0 0 auto;
     }
     .k{font-weight:950}
+
     .section{padding:26px 0}
-    .muted{color:var(--muted)}
     .grid3{display:grid; grid-template-columns: repeat(3, 1fr); gap:14px}
     .grid2{display:grid; grid-template-columns: 1fr 1fr; gap:14px}
+
     .miniCard{
       background: rgba(17,24,39,.66);
       border:1px solid var(--stroke);
       border-radius: var(--radius);
       padding:18px;
     }
+
     .tag{
       display:inline-block;
       font-size:12px; color:#0b1220;
@@ -127,22 +134,27 @@
       font-weight:950;
     }
     .tag.green{background: rgba(34,197,94,.95)}
+
     ul{margin:10px 0 0; padding-left:18px; color:#cbd5e1}
     li{margin:7px 0; color:#cbd5e1}
+
     .offers{display:grid; grid-template-columns: repeat(3, 1fr); gap:14px; margin-top:14px}
     .price{
       font-size:26px; font-weight:980; margin:10px 0 4px
     }
+
+    .divider{
+      height:1px; background: var(--stroke);
+      margin:14px 0;
+    }
+
     .foot{
       padding:24px 0 40px;
       border-top:1px solid var(--stroke);
       color:var(--muted);
       font-size:13px;
     }
-    .divider{
-      height:1px; background: var(--stroke);
-      margin:14px 0;
-    }
+
     @media (max-width: 920px){
       .hero{grid-template-columns:1fr}
       .grid3, .offers{grid-template-columns:1fr}
@@ -162,40 +174,49 @@
         <span>Adams Partners • Coaching Management</span>
       </a>
       <nav class="navlinks">
-        <a href="#pourqui">Pour qui</a>
+        <a href="#temoignages">Avis</a>
         <a href="#problematiques">Problématiques</a>
         <a href="#offres">Offres</a>
-        <a href="#temoignages">Témoignages</a>
         <a href="#methode">Méthode</a>
-        <a href="#apropos">À propos</a>
+        <a href="#apropos">Présentation</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
 
+    <!-- HERO + PRÉSENTATION VISIBLE -->
     <section class="hero">
       <div class="card">
-        <h1>Coaching en management<br/>pour entrepreneurs qui veulent une équipe plus solide.</h1>
+        <h1>Coaching en management<br/>pour entrepreneurs et petites équipes.</h1>
         <p class="sub">
-          Tu veux plus de sérénité au quotidien, une organisation plus claire, et des résultats plus réguliers.
-          On travaille ensemble pour mettre en place des règles simples, une bonne cadence, et un management plus fluide.
+          Objectif : un cadre clair, moins de tensions, une meilleure organisation, et une équipe plus autonome.
+          Ici, c’est du concret : routines, communication, recadrage, objectifs.
         </p>
 
         <div class="pillrow">
-          <span class="pill">Organisation & priorités</span>
           <span class="pill">Gestion d’équipe</span>
-          <span class="pill">Conflits & communication</span>
-          <span class="pill">Performance & objectifs</span>
-          <span class="pill">Routines terrain</span>
+          <span class="pill">Organisation</span>
+          <span class="pill">Conflits</span>
+          <span class="pill">Performance</span>
+          <span class="pill">Objectifs</span>
         </div>
 
         <div class="ctaRow">
-          <a class="btn primary" href="https://wa.me/33665017893?text=Bonjour%20Vincent%2C%20je%20viens%20de%20voir%20ta%20page%20de%20coaching%20management.%20Je%20souhaite%20%C3%A9changer.%20Ma%20situation%20%3A%20" target="_blank" rel="noopener">📱 WhatsApp</a>
+          <a class="btn primary" href="https://wa.me/33665017893?text=Bonjour%20Vincent%2C%20je%20souhaite%20%C3%A9changer%20pour%20un%20coaching%20management." target="_blank" rel="noopener">📱 WhatsApp</a>
           <a class="btn" href="tel:+33665017893">📞 Appeler</a>
-          <a class="btn" href="mailto:vadams.partners@gmail.com?subject=Demande%20coaching%20management&body=Bonjour%20Vincent%2C%0A%0AJe%20viens%20de%20voir%20ta%20page%20de%20coaching%20management.%0A%0A-%20Mon%20activit%C3%A9%20%3A%0A-%20Mon%20%C3%A9quipe%20%28taille%29%20%3A%0A-%20Mon%20objectif%20%3A%0A-%20Mon%20probl%C3%A8me%20principal%20%3A%0A-%20Mon%20d%C3%A9lai%20%3A%0A%0AMerci%2C" target="_blank" rel="noopener">✉️ Email</a>
+          <a class="btn" href="mailto:vadams.partners@gmail.com?subject=Demande%20coaching%20management&body=Bonjour%20Vincent%2C%0A%0AJe%20souhaite%20%C3%A9changer%20pour%20un%20coaching%20management.%0A%0AMerci%2C">✉️ Email</a>
         </div>
 
         <p class="small">
-          Réponse sous 24h ouvrées. Facture envoyée après accord. Paiement par virement.
+          Réponse sous 24h ouvrées • Facture après accord • Paiement par virement
+        </p>
+
+        <div class="divider"></div>
+
+        <h3 style="margin-top:0">Qui je suis (en bref)</h3>
+        <p class="muted" style="margin:0">
+          Je suis Vincent Adams, fondateur d’Adams Partners. J’accompagne des entrepreneurs sur le terrain,
+          notamment dans le retail et la seconde main, avec une approche simple : mettre un cadre, installer une routine,
+          et obtenir des résultats réguliers.
         </p>
       </div>
 
@@ -203,57 +224,71 @@
         <div class="line">
           <div class="ic">🎯</div>
           <div>
-            <div class="k">Objectif</div>
-            <div class="muted">Te redonner de la clarté, du rythme, et une équipe qui avance dans la même direction.</div>
+            <div class="k">Ce que tu vas gagner</div>
+            <div class="muted">Clarté, sérénité, et une équipe qui sait quoi faire.</div>
           </div>
         </div>
         <div class="line">
           <div class="ic">🧩</div>
           <div>
-            <div class="k">Approche</div>
-            <div class="muted">Du concret : routines, standards, communication, décisions, suivi d’objectifs.</div>
+            <div class="k">Comment on travaille</div>
+            <div class="muted">Cadre, routines, feedback, objectifs, suivi simple.</div>
           </div>
         </div>
         <div class="line">
           <div class="ic">✅</div>
           <div>
-            <div class="k">Résultat attendu</div>
-            <div class="muted">Moins de tensions, une meilleure organisation, et des résultats plus réguliers.</div>
+            <div class="k">Style</div>
+            <div class="muted">Direct, humain, et applicable dès la semaine 1.</div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="pourqui">
-      <h2>Pour qui ?</h2>
-      <p class="muted">
-        Pour les entrepreneurs (petites équipes) qui veulent structurer leur management sans se compliquer la vie.
-      </p>
+    <!-- AVIS CLIENTS (ULTRA VISIBLES) -->
+    <section class="section" id="temoignages">
+      <h2>Avis clients</h2>
+      <p class="muted">Retours (format anonymisé).</p>
 
       <div class="grid3">
         <div class="miniCard">
-          <span class="tag green">Dirigeant</span>
-          <h3>Tu portes tout sur tes épaules</h3>
-          <p class="muted">Tu gères l’opérationnel, les urgences, et tu manques de temps pour poser un cadre.</p>
+          <span class="tag green">Organisation</span>
+          <h3>Thomas R. — Dirigeant (équipe de 4)</h3>
+          <p class="muted">
+            “On était toujours dans l’urgence. Vincent nous a aidés à poser un cadre et une routine simple.
+            En quelques semaines, l’équipe savait quoi faire, et moi j’ai retrouvé de la clarté.”
+          </p>
         </div>
+
+        <div class="miniCard" style="border-color: rgba(34,197,94,.35); background: rgba(17,24,39,.78)">
+          <span class="tag green">Recadrage</span>
+          <h3>Karim L. — Manager (équipe de 6)</h3>
+          <p class="muted">
+            “Je n’osais pas recadrer. J’ai appris à poser des attentes claires et à dire les choses correctement.
+            Résultat : moins de flou, moins de tensions, et des sujets réglés plus vite.”
+          </p>
+        </div>
+
         <div class="miniCard">
-          <span class="tag">Manager</span>
-          <h3>Tu veux gagner en posture</h3>
-          <p class="muted">Tu veux manager avec plus d’impact : objectifs, feedback, recadrage, motivation.</p>
+          <span class="tag green">Cohésion</span>
+          <h3>Camille D. — Gérante (équipe de 5)</h3>
+          <p class="muted">
+            “Il y avait des non-dits dans l’équipe. On a travaillé la communication et les règles de fonctionnement.
+            L’ambiance s’est apaisée et l’organisation est devenue beaucoup plus fluide.”
+          </p>
         </div>
-        <div class="miniCard">
-          <span class="tag green">Équipe</span>
-          <h3>Tu veux une équipe alignée</h3>
-          <p class="muted">Moins de flou, moins de tensions, plus d’autonomie et de responsabilité.</p>
-        </div>
+      </div>
+
+      <div class="ctaRow" style="margin-top:14px">
+        <a class="btn primary" href="https://wa.me/33665017893?text=Bonjour%20Vincent%2C%20je%20souhaite%20%C3%A9changer%20suite%20%C3%A0%20ta%20page%20de%20coaching." target="_blank" rel="noopener">📱 Discuter sur WhatsApp</a>
+        <a class="btn" href="tel:+33665017893">📞 Appeler</a>
       </div>
     </section>
 
+    <!-- PROBLÉMATIQUES -->
     <section class="section" id="problematiques">
       <h2>Ce que le coaching vient régler</h2>
-      <p class="muted">
-        On travaille sur tes situations réelles. Pas de théorie pour faire joli.
-      </p>
+      <p class="muted">On travaille sur tes situations réelles. Pas de blabla.</p>
 
       <div class="grid2">
         <div class="miniCard">
@@ -261,36 +296,37 @@
           <ul>
             <li>Posture, leadership, clarté des attentes</li>
             <li>Recadrage, feedback, motivation</li>
-            <li>Communication interne (qui fait quoi, quand, comment)</li>
+            <li>Répartition des rôles</li>
           </ul>
         </div>
         <div class="miniCard">
           <h3>Organisation & efficacité</h3>
           <ul>
-            <li>Priorités, gestion du temps, routines simples</li>
-            <li>Réunions efficaces (brief / debrief)</li>
-            <li>Suivi d’actions : on décide, on fait, on vérifie</li>
+            <li>Priorités, gestion du temps, routines</li>
+            <li>Brief / debrief</li>
+            <li>Suivi d’actions simple</li>
           </ul>
         </div>
         <div class="miniCard">
           <h3>Conflits & tensions</h3>
           <ul>
-            <li>Identifier les causes (règles floues, injustice perçue, surcharge)</li>
-            <li>Méthode pour gérer les tensions sans les laisser pourrir</li>
-            <li>Règles de fonctionnement + cadre collectif</li>
+            <li>Méthode pour gérer sans laisser pourrir</li>
+            <li>Règles de fonctionnement</li>
+            <li>Communication plus saine</li>
           </ul>
         </div>
         <div class="miniCard">
           <h3>Performance & objectifs</h3>
           <ul>
-            <li>Objectifs simples, réalistes, compréhensibles par l’équipe</li>
+            <li>Objectifs simples et tenables</li>
             <li>Indicateurs utiles (pas 15 tableaux)</li>
-            <li>Rituel de suivi : progrès visibles semaine après semaine</li>
+            <li>Progression visible semaine après semaine</li>
           </ul>
         </div>
       </div>
     </section>
 
+    <!-- OFFRES -->
     <section class="section" id="offres">
       <h2>Les offres</h2>
       <p class="muted">Tu choisis selon ton besoin : clarifier, structurer, ou transformer en 30 jours.</p>
@@ -300,14 +336,14 @@
           <span class="tag">Entrée</span>
           <h3>Diagnostic management</h3>
           <div class="price">Sur devis</div>
-          <p class="muted">On fait le point, on identifie les blocages, et tu repars avec un plan simple.</p>
+          <p class="muted">On fait le point + plan simple d’actions.</p>
           <ul>
             <li>Échange approfondi</li>
-            <li>3 priorités + plan d’action</li>
-            <li>Règles et routines à mettre en place</li>
+            <li>Priorités + plan</li>
+            <li>Cadre à poser</li>
           </ul>
           <div class="ctaRow">
-            <a class="btn" href="https://wa.me/33665017893?text=Bonjour%20Vincent%2C%20je%20souhaite%20un%20diagnostic%20management.%20Ma%20situation%20%3A%20" target="_blank" rel="noopener">Demander</a>
+            <a class="btn" href="https://wa.me/33665017893?text=Bonjour%20Vincent%2C%20je%20souhaite%20un%20diagnostic%20management." target="_blank" rel="noopener">Demander</a>
           </div>
         </div>
 
@@ -315,14 +351,14 @@
           <span class="tag green">Le plus demandé</span>
           <h3>Coaching 2 semaines</h3>
           <div class="price">Sur devis</div>
-          <p class="muted">Coup de boost : on installe le cadre, les objectifs, et la cadence.</p>
+          <p class="muted">On installe le cadre et la cadence.</p>
           <ul>
             <li>Points réguliers</li>
-            <li>Actions concrètes chaque semaine</li>
-            <li>Support WhatsApp (messages courts)</li>
+            <li>Actions concrètes</li>
+            <li>Support WhatsApp</li>
           </ul>
           <div class="ctaRow">
-            <a class="btn primary" href="https://wa.me/33665017893?text=Bonjour%20Vincent%2C%20je%20souhaite%20le%20coaching%202%20semaines.%20Mon%20besoin%20%3A%20" target="_blank" rel="noopener">Démarrer</a>
+            <a class="btn primary" href="https://wa.me/33665017893?text=Bonjour%20Vincent%2C%20je%20souhaite%20le%20coaching%202%20semaines." target="_blank" rel="noopener">Démarrer</a>
           </div>
         </div>
 
@@ -330,144 +366,73 @@
           <span class="tag">Transformation</span>
           <h3>Coaching 4 semaines</h3>
           <div class="price">Sur devis</div>
-          <p class="muted">On structure durablement : posture, routines, équipe, objectifs, suivi.</p>
+          <p class="muted">Structuration durable : posture, routines, objectifs.</p>
           <ul>
             <li>Cadence hebdo</li>
-            <li>Organisation & routines</li>
-            <li>Gestion des tensions + règles de fonctionnement</li>
+            <li>Organisation</li>
+            <li>Gestion des tensions</li>
           </ul>
           <div class="ctaRow">
-            <a class="btn" href="https://wa.me/33665017893?text=Bonjour%20Vincent%2C%20je%20souhaite%20le%20coaching%204%20semaines.%20Mon%20besoin%20%3A%20" target="_blank" rel="noopener">Échanger</a>
+            <a class="btn" href="https://wa.me/33665017893?text=Bonjour%20Vincent%2C%20je%20souhaite%20le%20coaching%204%20semaines." target="_blank" rel="noopener">Échanger</a>
           </div>
         </div>
       </div>
-
-      <div class="divider"></div>
-      <p class="muted" style="margin:0">
-        Le plus simple : tu m’écris sur WhatsApp en 5 lignes (activité, taille d’équipe, objectif, problème, délai).
-      </p>
     </section>
 
-    <!-- TÉMOIGNAGES : 2 hommes, 1 femme -->
-    <section class="section" id="temoignages">
-      <h2>Témoignages</h2>
-      <p class="muted">
-        Quelques retours de dirigeants et managers accompagnés (format anonymisé).
-      </p>
-
-      <div class="grid3">
-        <div class="miniCard">
-          <span class="tag green">Organisation & priorités</span>
-          <h3>Thomas R. — Dirigeant, commerce de proximité (équipe de 4)</h3>
-          <p class="muted">
-            “On avait de la bonne volonté, mais pas de cadre. On passait notre temps à gérer l’urgence et à faire ‘au feeling’.
-            Vincent nous a aidés à poser une routine simple (priorités, brief, actions, suivi). En quelques semaines, on a arrêté
-            de courir dans tous les sens. L’équipe sait ce qu’elle doit faire, et moi j’ai retrouvé de la clarté.”
-          </p>
-        </div>
-
-        <div class="miniCard" style="border-color: rgba(34,197,94,.35); background: rgba(17,24,39,.78)">
-          <span class="tag green">Posture & recadrage</span>
-          <h3>Karim L. — Manager, retail (équipe de 6)</h3>
-          <p class="muted">
-            “J’avais du mal à recadrer. J’avais peur de créer du conflit et je finissais par laisser passer trop de choses.
-            Vincent m’a donné une méthode claire : des règles, des attentes simples, et surtout les mots pour dire les choses correctement.
-            J’ai gagné en posture, l’équipe est plus stable, et les sujets ne traînent plus.”
-          </p>
-        </div>
-
-        <div class="miniCard">
-          <span class="tag green">Tensions & cohésion</span>
-          <h3>Camille D. — Gérante, seconde main (équipe de 5)</h3>
-          <p class="muted">
-            “Il y avait des tensions dans l’équipe et beaucoup de non-dits. On sentait que ça pouvait exploser à tout moment.
-            On a travaillé la communication, les rôles, et les règles de fonctionnement. Ce que j’ai aimé, c’est le côté concret :
-            on met en place, on teste, on ajuste. L’ambiance s’est apaisée et on est repartis dans le bon sens.”
-          </p>
-        </div>
-      </div>
-
-      <div class="ctaRow" style="margin-top:14px">
-        <a class="btn primary" href="https://wa.me/33665017893?text=Bonjour%20Vincent%2C%20je%20souhaite%20%C3%A9changer%20sur%20un%20coaching%20management.%20Ma%20situation%20%3A%20" target="_blank" rel="noopener">📱 Discuter sur WhatsApp</a>
-        <a class="btn" href="tel:+33665017893">📞 Appeler</a>
-      </div>
-    </section>
-
+    <!-- MÉTHODE -->
     <section class="section" id="methode">
-      <h2>Ma méthode (simple, structurée, applicable)</h2>
-      <p class="muted">On avance avec un cadre clair et des actions concrètes.</p>
+      <h2>Ma méthode</h2>
+      <p class="muted">Simple, structurée, applicable.</p>
 
       <div class="grid3">
         <div class="miniCard">
           <h3>1) Clarté</h3>
-          <p class="muted">Objectifs + règles du jeu : qui fait quoi, comment on décide, comment on suit.</p>
+          <p class="muted">Objectifs + règles du jeu : qui fait quoi, et comment on suit.</p>
         </div>
         <div class="miniCard">
           <h3>2) Routines</h3>
-          <p class="muted">Brief/debrief, priorités, suivi d’actions. Une cadence qui crée de la stabilité.</p>
+          <p class="muted">Brief/debrief, priorités, suivi d’actions. On stabilise.</p>
         </div>
         <div class="miniCard">
           <h3>3) Progression</h3>
-          <p class="muted">On ajuste chaque semaine : posture, communication, autonomie, performance.</p>
+          <p class="muted">Ajustements hebdo : posture, communication, autonomie.</p>
         </div>
       </div>
     </section>
 
+    <!-- PRÉSENTATION / ADAMS PARTNERS -->
     <section class="section" id="apropos">
-      <h2>À propos</h2>
+      <h2>Présentation</h2>
       <p class="muted">
-        Je suis Vincent Adams, fondateur d’Adams Partners. J’accompagne des entrepreneurs et des équipes sur le terrain,
-        avec une approche très concrète : organisation, management, pilotage, et exécution.
+        Adams Partners est une structure dédiée à l’accompagnement des entrepreneurs, avec une forte expertise retail
+        et seconde main. En plus des missions terrain, je propose une prestation dédiée : le coaching en management,
+        pour aider les petites équipes à devenir plus stables, plus efficaces, et plus alignées.
       </p>
 
       <div class="grid2">
         <div class="miniCard">
           <span class="tag green">Adams Partners</span>
-          <h3>Spécialiste retail & seconde main</h3>
-          <p class="muted">
-            Adams Partners est dédiée à l’accompagnement des acteurs de la seconde main : performance, organisation,
-            animation d’équipe, méthodes de travail.
-          </p>
-          <ul>
-            <li>Cadre de pilotage simple</li>
-            <li>Routines et standards opérationnels</li>
-            <li>Accompagnement dirigeant & équipe</li>
-          </ul>
+          <h3>Retail & seconde main</h3>
+          <p class="muted">Organisation, routines, exécution, performance — approche terrain.</p>
         </div>
-
         <div class="miniCard">
           <span class="tag">Coaching management</span>
-          <h3>Une prestation dédiée</h3>
-          <p class="muted">
-            En plus des missions retail, je propose un coaching en management pour entrepreneurs :
-            retrouver une équipe alignée, gagner en sérénité, et stabiliser les résultats.
-          </p>
-          <ul>
-            <li>Posture & leadership</li>
-            <li>Gestion des conflits / tensions</li>
-            <li>Organisation & priorités</li>
-            <li>Objectifs & performance</li>
-          </ul>
+          <h3>Pour petites équipes</h3>
+          <p class="muted">Posture, communication, conflits, objectifs, performance.</p>
         </div>
       </div>
     </section>
 
+    <!-- CONTACT (SANS CHAMP À REMPLIR) -->
     <section class="section" id="contact">
-      <h2>Me contacter</h2>
-      <p class="muted">
-        Pas de formulaire : on va au plus simple. Écris-moi, appelle-moi, et on voit ensemble si je peux t’aider.
-      </p>
+      <h2>Contact</h2>
+      <p class="muted">Écris-moi ou appelle-moi, et on voit ensemble si je peux t’aider.</p>
 
       <div class="card">
-        <h3 style="margin:0 0 8px">Contact direct</h3>
-        <p class="muted" style="margin:0">
-          Pour gagner du temps, indique : activité, taille d’équipe, objectif, problème principal, délai.
-        </p>
-
-        <div class="ctaRow" style="margin-top:14px">
-          <a class="btn primary" href="https://wa.me/33665017893?text=Bonjour%20Vincent%2C%20je%20souhaite%20un%20coaching%20management.%0A-%20Activit%C3%A9%20%3A%0A-%20Taille%20d%E2%80%99%C3%A9quipe%20%3A%0A-%20Objectif%20%3A%0A-%20Probl%C3%A8me%20%3A%0A-%20D%C3%A9lai%20%3A%0A" target="_blank" rel="noopener">📱 WhatsApp</a>
+        <div class="ctaRow" style="margin-top:0">
+          <a class="btn primary" href="https://wa.me/33665017893?text=Bonjour%20Vincent%2C%20je%20souhaite%20%C3%A9changer%20pour%20un%20coaching%20management." target="_blank" rel="noopener">📱 WhatsApp</a>
           <a class="btn" href="tel:+33665017893">📞 06 65 01 78 93</a>
-          <a class="btn" href="mailto:vadams.partners@gmail.com?subject=Demande%20coaching%20management&body=Bonjour%20Vincent%2C%0A%0A-%20Activit%C3%A9%20%3A%0A-%20Taille%20d%E2%80%99%C3%A9quipe%20%3A%0A-%20Objectif%20%3A%0A-%20Probl%C3%A8me%20principal%20%3A%0A-%20D%C3%A9lai%20%3A%0A%0AMerci%2C" target="_blank" rel="noopener">✉️ Email</a>
+          <a class="btn" href="mailto:vadams.partners@gmail.com?subject=Demande%20coaching%20management&body=Bonjour%20Vincent%2C%0A%0AJe%20souhaite%20%C3%A9changer%20pour%20un%20coaching%20management.%0A%0AMerci%2C">✉️ vadams.partners@gmail.com</a>
         </div>
 
         <p class="small">
@@ -481,9 +446,7 @@
 
     <footer class="foot">
       <div>© <span id="year"></span> Adams Partners — Coaching & accompagnement.</div>
-      <div style="margin-top:6px">
-        Mentions : Page de présentation. Facturation sur devis, paiement par virement après accord.
-      </div>
+      <div style="margin-top:6px">Facturation sur devis • Paiement par virement après accord</div>
     </footer>
   </div>
 
