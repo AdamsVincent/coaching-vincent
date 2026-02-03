@@ -31,6 +31,7 @@
     }
     a{color:inherit}
     .wrap{max-width:var(--max); margin:0 auto; padding:24px}
+
     .nav{
       display:flex; align-items:center; justify-content:space-between;
       padding:14px 0 8px;
@@ -40,12 +41,6 @@
       display:flex; align-items:center; gap:10px; text-decoration:none;
       font-weight:950; letter-spacing:.2px;
       white-space:nowrap;
-    }
-    .logo{
-      width:36px; height:36px; border-radius:12px;
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      box-shadow: var(--shadow);
-      flex:0 0 auto;
     }
     .navlinks{display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end}
     .navlinks a{
@@ -140,7 +135,7 @@
 
     .offers{display:grid; grid-template-columns: repeat(3, 1fr); gap:14px; margin-top:14px}
     .price{
-      font-size:26px; font-weight:980; margin:10px 0 4px
+      font-size:28px; font-weight:980; margin:10px 0 4px
     }
 
     .divider{
@@ -170,7 +165,10 @@
   <div class="wrap" id="top">
     <header class="nav">
       <a class="brand" href="#top">
-        <span class="logo" aria-hidden="true"></span>
+        <img src="logo-adams-partners.png" alt="Adams Partners"
+             style="width:40px;height:40px;border-radius:12px;object-fit:contain;
+                    box-shadow: var(--shadow);background: rgba(255,255,255,.06);
+                    border:1px solid var(--stroke); padding:4px;" />
         <span>Adams Partners • Coaching Management</span>
       </a>
       <nav class="navlinks">
@@ -245,7 +243,7 @@
       </div>
     </section>
 
-    <!-- AVIS CLIENTS (ULTRA VISIBLES) -->
+    <!-- AVIS CLIENTS -->
     <section class="section" id="temoignages">
       <h2>Avis clients</h2>
       <p class="muted">Retours (format anonymisé).</p>
@@ -280,7 +278,7 @@
       </div>
 
       <div class="ctaRow" style="margin-top:14px">
-        <a class="btn primary" href="https://wa.me/33665017893?text=Bonjour%20Vincent%2C%20je%20souhaite%20%C3%A9changer%20suite%20%C3%A0%20ta%20page%20de%20coaching." target="_blank" rel="noopener">📱 Discuter sur WhatsApp</a>
+        <a class="btn primary" href="https://wa.me/33665017893?text=Bonjour%20Vincent%2C%20je%20souhaite%20%C3%A9changer%20suite%20%C3%A0%20ta%20page%20de%20coaching." target="_blank" rel="noopener">📱 WhatsApp</a>
         <a class="btn" href="tel:+33665017893">📞 Appeler</a>
       </div>
     </section>
@@ -326,54 +324,54 @@
       </div>
     </section>
 
-    <!-- OFFRES -->
+    <!-- OFFRES + TARIFS -->
     <section class="section" id="offres">
       <h2>Les offres</h2>
-      <p class="muted">Tu choisis selon ton besoin : clarifier, structurer, ou transformer en 30 jours.</p>
+      <p class="muted">Tarifs indiqués • Facture après accord • Paiement par virement</p>
 
       <div class="offers">
         <div class="miniCard">
           <span class="tag">Entrée</span>
           <h3>Diagnostic management</h3>
-          <div class="price">Sur devis</div>
+          <div class="price">490 €</div>
           <p class="muted">On fait le point + plan simple d’actions.</p>
           <ul>
-            <li>Échange approfondi</li>
-            <li>Priorités + plan</li>
-            <li>Cadre à poser</li>
+            <li>Échange approfondi (visio / téléphone)</li>
+            <li>3 priorités + plan d’action</li>
+            <li>Cadre et routines à mettre en place</li>
           </ul>
           <div class="ctaRow">
-            <a class="btn" href="https://wa.me/33665017893?text=Bonjour%20Vincent%2C%20je%20souhaite%20un%20diagnostic%20management." target="_blank" rel="noopener">Demander</a>
+            <a class="btn" href="https://wa.me/33665017893?text=Bonjour%20Vincent%2C%20je%20souhaite%20le%20Diagnostic%20management%20%C3%A0%20490%E2%82%AC." target="_blank" rel="noopener">Choisir</a>
           </div>
         </div>
 
         <div class="miniCard" style="border-color: rgba(34,197,94,.35); background: rgba(17,24,39,.78)">
           <span class="tag green">Le plus demandé</span>
           <h3>Coaching 2 semaines</h3>
-          <div class="price">Sur devis</div>
+          <div class="price">1190 €</div>
           <p class="muted">On installe le cadre et la cadence.</p>
           <ul>
-            <li>Points réguliers</li>
-            <li>Actions concrètes</li>
-            <li>Support WhatsApp</li>
+            <li>Points réguliers + actions concrètes</li>
+            <li>Organisation, communication, recadrage</li>
+            <li>Support WhatsApp (messages courts)</li>
           </ul>
           <div class="ctaRow">
-            <a class="btn primary" href="https://wa.me/33665017893?text=Bonjour%20Vincent%2C%20je%20souhaite%20le%20coaching%202%20semaines." target="_blank" rel="noopener">Démarrer</a>
+            <a class="btn primary" href="https://wa.me/33665017893?text=Bonjour%20Vincent%2C%20je%20souhaite%20le%20Coaching%202%20semaines%20%C3%A0%201190%E2%82%AC." target="_blank" rel="noopener">Choisir</a>
           </div>
         </div>
 
         <div class="miniCard">
           <span class="tag">Transformation</span>
           <h3>Coaching 4 semaines</h3>
-          <div class="price">Sur devis</div>
+          <div class="price">2190 €</div>
           <p class="muted">Structuration durable : posture, routines, objectifs.</p>
           <ul>
-            <li>Cadence hebdo</li>
-            <li>Organisation</li>
-            <li>Gestion des tensions</li>
+            <li>Cadence hebdo + suivi</li>
+            <li>Gestion des tensions + règles de fonctionnement</li>
+            <li>Objectifs, performance, autonomie</li>
           </ul>
           <div class="ctaRow">
-            <a class="btn" href="https://wa.me/33665017893?text=Bonjour%20Vincent%2C%20je%20souhaite%20le%20coaching%204%20semaines." target="_blank" rel="noopener">Échanger</a>
+            <a class="btn" href="https://wa.me/33665017893?text=Bonjour%20Vincent%2C%20je%20souhaite%20le%20Coaching%204%20semaines%20%C3%A0%202190%E2%82%AC." target="_blank" rel="noopener">Choisir</a>
           </div>
         </div>
       </div>
@@ -395,7 +393,7 @@
         </div>
         <div class="miniCard">
           <h3>3) Progression</h3>
-          <p class="muted">Ajustements hebdo : posture, communication, autonomie.</p>
+          <p class="muted">Ajustements : posture, communication, autonomie.</p>
         </div>
       </div>
     </section>
@@ -423,7 +421,7 @@
       </div>
     </section>
 
-    <!-- CONTACT (SANS CHAMP À REMPLIR) -->
+    <!-- CONTACT -->
     <section class="section" id="contact">
       <h2>Contact</h2>
       <p class="muted">Écris-moi ou appelle-moi, et on voit ensemble si je peux t’aider.</p>
@@ -446,7 +444,7 @@
 
     <footer class="foot">
       <div>© <span id="year"></span> Adams Partners — Coaching & accompagnement.</div>
-      <div style="margin-top:6px">Facturation sur devis • Paiement par virement après accord</div>
+      <div style="margin-top:6px">Facturation • Paiement par virement après accord</div>
     </footer>
   </div>
 
@@ -455,3 +453,4 @@
   </script>
 </body>
 </html>
+
