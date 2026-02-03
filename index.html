@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Coaching Pro en Ligne | Vincent Adams</title>
+  <meta name="description" content="Coaching en ligne pour dirigeants et managers : management, pilotage, stock, vente, marge. Plan clair + suivi." />
+  <style>
+    :root{
+      --bg:#0b0f19;
+      --card:#111827;
+      --muted:#9ca3af;
+      --text:#e5e7eb;
+      --accent:#22c55e;
+      --accent2:#60a5fa;
+      --stroke:rgba(255,255,255,.08);
+      --shadow: 0 12px 40px rgba(0,0,0,.35);
+      --radius: 16px;
+      --max: 1100px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", sans-serif;
+      background: radial-gradient(1100px 600px at 20% -10%, rgba(96,165,250,.25), transparent 60%),
+                  radial-gradient(900px 500px at 90% 10%, rgba(34,197,94,.20), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.5;
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:24px}
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px; text-decoration:none;
+      font-weight:800; letter-spacing:.2px;
+    }
+    .logo{
+      width:36px; height:36px; border-radius:12px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow: var(--shadow);
+    }
+    .navlinks{display:flex; gap:14px; flex-wrap:wrap}
+    .navlinks a{
+      text-decoration:none; color:var(--muted);
+      padding:8px 10px; border-radius:12px; border:1px solid transparent;
+    }
+    .navlinks a:hover{border-color:var(--stroke); color:var(--text)}
+    .hero{
+      display:grid; grid-template-columns: 1.2fr .8fr; gap:20px;
+      padding:26px 0 10px;
+    }
+    .hcard{
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      border:1px solid var(--stroke);
+      border-radius: var(--radius);
+      padding:28px;
+      box-shadow: var(--shadow);
+    }
+    h1{margin:0 0 10px; font-size: clamp(28px, 3.2vw, 44px); line-height:1.12}
+    .sub{color:var(--muted); font-size: clamp(15px, 1.35vw, 18px); margin:0 0 18px}
+    .pillrow{display:flex; gap:10px; flex-wrap:wrap; margin:12px 0 18px}
+    .pill{
+      padding:8px 10px; border-radius:999px;
+      border:1px solid var(--stroke);
+      background: rgba(255,255,255,.03);
+      color: #d1d5db;
+      font-size:13px;
+    }
+    .ctaRow{display:flex; gap:12px; flex-wrap:wrap; margin-top:16px}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      gap:10px; padding:12px 14px;
+      border-radius:14px; text-decoration:none;
+      border:1px solid var(--stroke);
+      background: rgba(255,255,255,.03);
+      color:var(--text);
+      min-width: 210px;
+    }
+    .btn.primary{
+      border-color: rgba(34,197,94,.45);
+      background: linear-gradient(135deg, rgba(34,197,94,.95), rgba(96,165,250,.85));
+      color:#07110a;
+      font-weight:800;
+    }
+    .btn:hover{transform: translateY(-1px)}
+    .small{font-size:13px; color:var(--muted); margin-top:10px}
+    .sidebox .line{
+      display:flex; gap:12px; align-items:flex-start;
+      padding:12px 0; border-bottom:1px solid var(--stroke)
+    }
+    .sidebox .line:last-child{border-bottom:none}
+    .ic{
+      width:34px; height:34px; border-radius:12px;
+      display:grid; place-items:center;
+      background: rgba(255,255,255,.05);
+      border:1px solid var(--stroke);
+      flex:0 0 auto;
+    }
+    .k{font-weight:800}
+    .section{padding:28px 0}
+    .section h2{margin:0 0 10px; font-size: clamp(20px, 2vw, 28px)}
+    .section p{margin:0 0 14px; color: var(--muted)}
+    .grid3{display:grid; grid-template-columns: repeat(3, 1fr); gap:14px}
+    .card{
+      background: rgba(17,24,39,.66);
+      border:1px solid var(--stroke);
+      border-radius: var(--radius);
+      padding:18px;
+    }
+    .card h3{margin:6px 0 8px; font-size:16px}
+    .card p{margin:0; color:var(--muted); font-size:14px}
+    .offers{display:grid; grid-template-columns: repeat(3, 1fr); gap:14px; margin-top:14px}
+    .price{
+      font-size:28px; font-weight:900; margin:10px 0 4px
+    }
+    .tag{
+      display:inline-block;
+      font-size:12px; color:#0b1220;
+      padding:6px 10px; border-radius:999px;
+      background: rgba(96,165,250,.95);
+      font-weight:800;
+    }
+    .tag.green{background: rgba(34,197,94,.95)}
+    ul{margin:12px 0 0; padding-left:18px; color:#cbd5e1}
+    li{margin:8px 0; color:#cbd5e1}
+    .faq{display:grid; grid-template-columns: 1fr 1fr; gap:14px}
+    details{
+      background: rgba(17,24,39,.66);
+      border:1px solid var(--stroke);
+      border-radius: var(--radius);
+      padding:14px 16px;
+    }
+    summary{cursor:pointer; font-weight:800}
+    details p{margin:10px 0 0}
+    .foot{
+      padding:26px 0 40px;
+      border-top:1px solid var(--stroke);
+      color:var(--muted);
+      font-size:13px;
+    }
+    .contactBox{
+      display:grid; grid-template-columns: 1fr 1fr; gap:14px; margin-top:14px;
+    }
+    .input{
+      width:100%;
+      padding:12px 12px;
+      border-radius:14px;
+      border:1px solid var(--stroke);
+      background: rgba(255,255,255,.03);
+      color:var(--text);
+      outline:none;
+    }
+    textarea.input{min-height:120px; resize:vertical}
+    .note{
+      font-size:12px; color:var(--muted); margin-top:8px
+    }
+
+    @media (max-width: 920px){
+      .hero{grid-template-columns:1fr}
+      .grid3, .offers{grid-template-columns:1fr}
+      .faq{grid-template-columns:1fr}
+      .btn{min-width: 100%}
+      .contactBox{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header class="nav">
+      <a class="brand" href="#top" id="top">
+        <span class="logo" aria-hidden="true"></span>
+        <span>Vincent Adams • Coaching Pro</span>
+      </a>
+      <nav class="navlinks">
+        <a href="#pourqui">Pour qui</a>
+        <a href="#offres">Offres</a>
+        <a href="#methode">Méthode</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hcard">
+        <h1>Coaching en ligne pour dirigeants & managers<br/>qui veulent du concret.</h1>
+        <p class="sub">
+          On remet de l’ordre, on fixe 3 priorités, et on met une routine simple qui fait avancer chaque semaine :
+          <b>management</b>, <b>stock</b>, <b>vente</b>, <b>marge</b>.
+        </p>
+
+        <div class="pillrow">
+          <span class="pill">Plan d’action clair</span>
+          <span class="pill">Suivi KPI hebdo</span>
+          <span class="pill">Routines terrain</span>
+          <span class="pill">Support 5j/7</span>
+        </div>
+
+        <div class="ctaRow">
+          <a class="btn primary" href="#contact">📅 Réserver un échange</a>
+          <a class="btn" href="#offres">Voir les offres</a>
+        </div>
+
+        <div class="small">
+          Pas de blabla : tu repars avec un plan, des chiffres, et une cadence.
+        </div>
+      </div>
+
+      <div class="hcard sidebox">
+        <div class="line">
+          <div class="ic">🎯</div>
+          <div>
+            <div class="k">Objectif</div>
+            <div style="color:var(--muted)">Reprendre le contrôle en 30 jours : priorités + rythme + résultats.</div>
+          </div>
+        </div>
+        <div class="line">
+          <div class="ic">📌</div>
+          <div>
+            <div class="k">Ce qu’on travaille</div>
+            <div style="color:var(--muted)">Organisation, management, animation d’équipe, stock/rotation, vente, marge.</div>
+          </div>
+        </div>
+        <div class="line">
+          <div class="ic">✅</div>
+          <div>
+            <div class="k">Ce que tu obtiens</div>
+            <div style="color:var(--muted)">Un plan simple + des routines + un suivi qui t’oblige à avancer.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pourqui">
+      <h2>Pour qui ?</h2>
+      <p>
+        Pour les entrepreneurs, dirigeants et managers qui ont de la demande… mais qui sentent que
+        <b>l’exécution</b> n’est pas assez maîtrisée au quotidien.
+      </p>
+
+      <div class="grid3">
+        <div class="card">
+          <div class="tag green">Dirigeant</div>
+          <h3>Tu veux une vision claire</h3>
+          <p>Tu veux savoir où agir en priorité, quoi suivre, et comment tenir la cadence.</p>
+        </div>
+        <div class="card">
+          <div class="tag">Manager</div>
+          <h3>Tu veux une routine simple</h3>
+          <p>Brief/debrief, suivi d’actions, objectifs, et méthode pour faire progresser ton équipe.</p>
+        </div>
+        <div class="card">
+          <div class="tag green">Retail / seconde main</div>
+          <h3>Tu veux des chiffres</h3>
+          <p>Stock, rotation, marge, panier… et surtout la discipline pour stabiliser les résultats.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="offres">
+      <h2>Offres</h2>
+      <p>Choisis le format selon ton besoin : entrer en douceur, coup de boost, ou transformation 30 jours.</p>
+
+      <div class="offers">
+        <div class="card">
+          <div class="tag">Entrée</div>
+          <h3>Diagnostic + plan d’action</h3>
+          <div class="price">390–690€</div>
+          <p>Idéal si tu veux clarifier et repartir avec une feuille de route.</p>
+          <ul>
+            <li>1 visio (60–90 min)</li>
+            <li>3 priorités + 5 KPI</li>
+            <li>Plan d’action 30 jours</li>
+          </ul>
+          <div class="ctaRow">
+            <a class="btn" href="#contact">Je veux le diagnostic</a>
+          </div>
+        </div>
+
+        <div class="card" style="border-color: rgba(34,197,94,.35); background: rgba(17,24,39,.78)">
+          <div class="tag green">Populaire</div>
+          <h3>Starter 2 semaines</h3>
+          <div class="price">1 200€</div>
+          <p>Un coup de boost cadré : on lance la routine et on sécurise l’exécution.</p>
+          <ul>
+            <li>2 visios (départ + recadrage)</li>
+            <li>Support asynchrone 5j/7</li>
+            <li>Check-list “semaine type”</li>
+          </ul>
+          <div class="ctaRow">
+            <a class="btn primary" href="#contact">Réserver</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="tag">Résultat</div>
+          <h3>Accélérateur 4 semaines</h3>
+          <div class="price">2 300€</div>
+          <p>Le format qui change vraiment les choses : suivi hebdo + ajustements rapides.</p>
+          <ul>
+            <li>4 visios (1 / semaine)</li>
+            <li>Suivi KPI hebdo</li>
+            <li>Plan d’actions + routines terrain</li>
+            <li>Support asynchrone 5j/7</li>
+          </ul>
+          <div class="ctaRow">
+            <a class="btn" href="#contact">Je veux accélérer</a>
+          </div>
+        </div>
+      </div>
+
+      <p class="note">
+        Paiement : virement / lien de paiement (à définir). Facture fournie.  
+        Support asynchrone : messages courts, réponse sous 24h ouvrées.
+      </p>
+    </section>
+
+    <section class="section" id="methode">
+      <h2>Ma méthode (simple, terrain, mesurable)</h2>
+      <p>4 piliers : pas 15 chantiers en parallèle. On avance vite, et on tient.</p>
+
+      <div class="grid3">
+        <div class="card">
+          <h3>1) Clarté</h3>
+          <p>Objectifs + 5 KPI max. On sait ce qu’on vise et ce qu’on mesure.</p>
+        </div>
+        <div class="card">
+          <h3>2) Routines</h3>
+          <p>Brief/debrief, cadence hebdo, et standards simples qui stabilisent l’équipe.</p>
+        </div>
+        <div class="card">
+          <h3>3) Exécution</h3>
+          <p>3 actions terrain/semaine (pas 15). On priorise, on fait, on vérifie.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <h2>FAQ</h2>
+      <div class="faq">
+        <details>
+          <summary>Je n’ai pas le temps, ça marche quand même ?</summary>
+          <p>Oui, si on reste sur 3 priorités et une routine simple. Le coaching sert justement à créer de l’ordre et du rythme.</p>
+        </details>
+        <details>
+          <summary>Tu fais plutôt stratégie ou opérationnel ?</summary>
+          <p>Opérationnel + pilotage. La stratégie est utile, mais mon job est de la traduire en actions et en chiffres.</p>
+        </details>
+        <details>
+          <summary>Si je suis en difficulté de management ?</summary>
+          <p>On met des standards (brief/debrief, objectifs, feedback, suivi). Tu gagnes en posture et en méthode.</p>
+        </details>
+        <details>
+          <summary>Tu peux adapter selon mon activité ?</summary>
+          <p>Oui. On part de tes contraintes réelles : équipe, volumes, stock, organisation, objectifs.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <h2>Réserver un échange</h2>
+      <p>
+        Dis-moi rapidement ta situation (objectif, problème, urgence). Je te réponds et on cale un créneau.
+      </p>
+
+      <!-- Formulaire simple: fonctionne si tu le branches à un service de formulaire (Netlify Forms / Formspree / etc.) -->
+      <form class="card" method="post" action="#">
+        <div class="contactBox">
+          <input class="input" name="prenom" placeholder="Prénom" required />
+          <input class="input" name="nom" placeholder="Nom" required />
+          <input class="input" name="societe" placeholder="Société (optionnel)" />
+          <input class="input" name="tel" placeholder="Téléphone" />
+          <input class="input" name="email" placeholder="Email" type="email" required />
+          <input class="input" name="objectif" placeholder="Objectif principal (ex: marge / équipe / stock / vente)" required />
+        </div>
+        <div style="margin-top:12px">
+          <textarea class="input" name="message" placeholder="En 5 lignes : ta situation, ce que tu veux obtenir, et le délai." required></textarea>
+        </div>
+
+        <div class="ctaRow" style="margin-top:12px">
+          <button class="btn primary" type="submit">📩 Envoyer</button>
+          <a class="btn" href="mailto:vadams.partners@gmail.com">Écrire par email</a>
+        </div>
+
+        <p class="note">
+          En soumettant ce formulaire, tu acceptes d’être recontacté. Tes données ne sont pas revendues.
+        </p>
+      </form>
+
+      <div class="grid3" style="margin-top:14px">
+        <div class="card">
+          <h3>Contact direct</h3>
+          <p>
+            Téléphone : <a href="tel:+33665017893">06 65 01 78 93</a><br/>
+            Email : <a href="mailto:vadams.partners@gmail.com">vadams.partners@gmail.com</a>
+          </p>
+        </div>
+        <div class="card">
+          <h3>Liens</h3>
+          <p>
+            LinkedIn : <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/vincent-adams-881787153">Voir le profil</a><br/>
+            Site : <a target="_blank" rel="noopener" href="https://www.adamspartners.fr/">adamspartners.fr</a>
+          </p>
+        </div>
+        <div class="card">
+          <h3>Disponibilités</h3>
+          <p>Créneaux en visio du lundi au vendredi. Réponse sous 24h ouvrées.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="foot">
+      <div>© <span id="year"></span> Vincent Adams — Coaching & accompagnement.</div>
+      <div style="margin-top:6px">
+        Mentions : page de présentation. Pour les CGV, politique de confidentialité et facturation, ajoute une page dédiée si tu encaisses en ligne.
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
